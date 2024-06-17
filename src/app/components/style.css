@@ -1,0 +1,32 @@
+.gradient {
+    background: linear-gradient(to right, #503354, #616f9f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradientB {
+    background: linear-gradient(to right, #2663c0, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.goAway {
+    transition: 0.7s all ease;
+    filter:opacity(0);
+}
+
+@keyframes testimonialCarousel{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(calc(-257px * 15));
+    }
+}
+
+.carousel{
+    gap: 7px;
+    animation: testimonialCarousel 120s infinite linear;
+}
