@@ -17,6 +17,7 @@
 }
 
 body {
+  font-weight: 200;
   color: white;
   background: linear-gradient(
       to bottom,

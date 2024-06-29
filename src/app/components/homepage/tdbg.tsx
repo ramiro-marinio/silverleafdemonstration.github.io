@@ -1,10 +1,7 @@
 'use client';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { OrbitControls } from 'three/examples/jsm/Addons.js';
-import { calcAngle,length,pythagoreanTheorem,vectorMultiply } from './functions';
-import { radixSort } from 'three/examples/jsm/utils/SortUtils.js';
 export default function ThreeDBackground() {
   let firstTS = 0
   let timeStamp = 0

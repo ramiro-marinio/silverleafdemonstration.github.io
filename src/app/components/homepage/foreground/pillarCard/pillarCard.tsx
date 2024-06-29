@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { SlideIn } from "../slideIn/slideIn";
+import { SlideIn } from "@/app/components/general/slideIn/slideIn";
 
 export const PillarCard:React.FC<{icon:ReactNode,title:string,body:string,animId:string}> = (props)=>{
     return (

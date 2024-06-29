@@ -1,0 +1,9 @@
+.link{
+    background-color: white;
+    border-radius: 1000px;
+    color:black;
+    @media(prefers-color-scheme: light){
+        background-color: black;
+        color:white
+    }
+}
