@@ -6,9 +6,6 @@ export default function Footer(){
             </div>
             <div className='flex flex-row w-full p-3 justify-around'>
                 <p className='transition-all hover:cursor-pointer hover:brightness-110 active:brightness-95 text-white font-thin'>
-                    About Us
-                </p>
-                <p className='transition-all hover:cursor-pointer hover:brightness-110 active:brightness-95 text-white font-thin'>
                     TOS
                 </p>
                 <p className='transition-all hover:cursor-pointer hover:brightness-110 active:brightness-95 text-white font-thin'>

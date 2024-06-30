@@ -4,12 +4,28 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+@media(prefers-color-scheme: light){
+    .gradient{
+        background: linear-gradient(to right, #8c2f98, #2c4493);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
 
 .gradientB {
     background: linear-gradient(to right, #2663c0, #ffffff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+@media(prefers-color-scheme: light){
+    .gradientB{
+        background: linear-gradient(to right, #2663c0, #9493ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 .goAway {

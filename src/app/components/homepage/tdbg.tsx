@@ -6,9 +6,16 @@ export default function ThreeDBackground() {
   let firstTS = 0
   let timeStamp = 0
   useEffect(()=>{
+    const prefersDarkColorScheme = () =>
+      window &&
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
     firstTS = Date.now()
     const gltfLoader = new GLTFLoader()
     const scene = new THREE.Scene()
+    if(!prefersDarkColorScheme()){
+      scene.background = new THREE.Color(0xa8a294);
+    }
     const cam = new THREE.PerspectiveCamera(75, screen.width / screen.height, 0.1, 3000);
     const renderer = new THREE.WebGLRenderer({
       antialias:true,
@@ -21,7 +28,7 @@ export default function ThreeDBackground() {
 
       // Create the wireframe material
       const wireframeMaterial = new THREE.MeshStandardMaterial({
-        color: 0xF5F5DC, // White color // Enable wireframe rendering
+        color: prefersDarkColorScheme() ? 0xF5F5DC : 0xDFD5CC, // White color // Enable wireframe rendering
       });
   
       // Apply material to the model scene
@@ -34,7 +41,7 @@ export default function ThreeDBackground() {
        // Use the loaded model (replace with your rendering logic)
     }
     loadCity()
-    const light = new THREE.PointLight( 0x404040,1000000,10000 );
+    const light = new THREE.PointLight( 0x404040,prefersDarkColorScheme() ? 1000000 : 10000000,10000 );
     light.position.y = 500
     scene.add(light)
     cam.position.y = 20

@@ -1,7 +1,5 @@
-'use client'
 import { PillarCard } from "./pillarCard/pillarCard"
 import Testimonial from "./testimonial/testimonial"
-import { VideoNButtons } from "./videonbuttons"
 import '../style.css'
 import { Handshake } from "./pillarCard/icons/handshake"
 import { Clock } from "./pillarCard/icons/clock"
@@ -39,10 +37,10 @@ export default function Main(){
                 </div>
                 <h1 className='font-extrabold text-[72px] gradientB mb-2'>WHAT DEFINES US?</h1>
                 <div className='w-fit p-2 grid grid-cols-2 gap-2'>
-                    <PillarCard animId='cardA' title='Opportunities' body='Because you deserve progress.' icon={<Handshake/>}/>
-                    <PillarCard animId='cardB' title='Efficiency' body='Because your time is priceless.' icon={<Clock/>}/>
-                    <PillarCard animId='cardC' title='Customer Appreciation' body='Because you give us purpose, feedback and resources. You are our top priority.' icon={<Heart/>}/>
-                    <PillarCard animId='cardD' title='Innovation' body='To focus on what you care about, not on inconveniences.' icon={<Brain/>}/>
+                    <PillarCard delay={150} animId='cardA' title='Opportunities' body='Because you deserve progress.' icon={<Handshake/>}/>
+                    <PillarCard delay={50} animId='cardB' title='Efficiency' body='Because your time is priceless.' icon={<Clock/>}/>
+                    <PillarCard delay={350} animId='cardC' title='Customer Appreciation' body='Because you give us purpose, feedback and resources. You are our top priority.' icon={<Heart/>}/>
+                    <PillarCard delay={250} animId='cardD' title='Innovation' body='To focus on what you care about, not on inconveniences.' icon={<Brain/>}/>
                 </div>
             </div>
         </main>
