@@ -8,15 +8,15 @@
     font-weight: 500;
     color: white;
     user-select: none;
-    transition: filter 0.3s ease, scale 0.3s ease;
+    transition: filter 0.3s ease, padding 0.6s ease;
     &:hover{
         cursor: pointer;
         filter: brightness(125%);
-        scale: 1.05;
+        padding: 14px 20px;
     }
     &:active{
         filter: brightness(90%);
-        scale: 0.98;
+        padding: 12px 14px;
     }
 }
 

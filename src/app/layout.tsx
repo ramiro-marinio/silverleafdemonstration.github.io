@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import AppWrapper from "./components/context/app_wrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,10 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className='w-[100vw] h-[100vh] overflow-hidden'>
-        {children}
-      </body>
-    </html>
+    <AppWrapper>
+      <html lang="en">
+        <body className='w-[100vw] h-[100vh] overflow-hidden'>
+          {children}
+        </body>
+      </html>
+    </AppWrapper>
   );
 }
