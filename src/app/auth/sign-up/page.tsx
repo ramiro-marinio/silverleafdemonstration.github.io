@@ -7,7 +7,7 @@ import Button from '../../components/general/button/button';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import Scrollbars from 'react-custom-scrollbars';
+// import Scrollbars from 'react-custom-scrollbars';
 import RenderIfClient from '../../components/general/renderIfClient';
 
 type SignUpInput = {
@@ -36,10 +36,7 @@ export default function SignUp() {
     }
   };
   return (
-    <div className='w-full h-full flex flex-col items-center justify-center'>
-      <RenderIfClient>
-        <Scrollbars>
-          <form className='flex-grow w-full flex flex-col justify-center items-center' onSubmit={handleSubmit(onSubmit)} autoComplete='false'>
+          <form className='flex-grow w-full h-full flex flex-col justify-center items-center' onSubmit={handleSubmit(onSubmit)} autoComplete='false'>
             <div className='w-[350px] p-2 rounded-[20px] gap-3 border border-black dark:border-[rgba(255,255,255,0.1)]
             flex flex-col items-center'>
               <h1 className='text-2xl font-bold'>Sign Up</h1>
@@ -70,8 +67,5 @@ export default function SignUp() {
               </div>
             </div>
           </form>
-        </Scrollbars>
-      </RenderIfClient>
-    </div>
   )
 }

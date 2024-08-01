@@ -23,7 +23,7 @@ const firebaseConfig = {
 };
 
 export const FirebaseContext = createContext<Context>(defaultValue);
-export default function AppWrapper({children}:{children:React.ReactNode}) {
+export default function FirebaseWrapper({children}:{children:React.ReactNode}) {
   let[user,setUser] = useState<User|undefined|null>(null);
   console.log('heyy')
   const init = async()=>{

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import AppWrapper from "./components/context/app_wrapper";
+import FirebaseWrapper from "./components/context/app_wrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,12 +16,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <AppWrapper>
+    <FirebaseWrapper>
       <html lang="en">
-        <body className='w-[100vw] h-[100vh] overflow-hidden'>
+        <head>
+          <script src="https://unpkg.com/phosphor-icons"></script>
+        </head>
+        <body className={`w-[100vw] h-[100vh] overflow-hidden ${inter.className}`}>
           {children}
         </body>
       </html>
-    </AppWrapper>
+    </FirebaseWrapper>
   );
 }
