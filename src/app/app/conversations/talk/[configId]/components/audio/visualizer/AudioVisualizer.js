@@ -66,7 +66,7 @@ class AudioVisualizer {
         try {
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
             const source = this.audioContext.createMediaStreamSource(stream);
-            source.connect(this.analyser);
+            // source.connect(this.analyser);
         } catch (error) {
             console.error('Error accessing microphone:', error);
         }

@@ -35,8 +35,17 @@ export default function CallInterface() {
     }
   },[status]);
   return (
-    <div>
-        <div id='visualizerBox'></div>
+    <div className='w-full h-full flex flex-row gap-1 p-1'>
+        <div className='border flex-[7] rounded-lg border-white flex flex-col'>
+            <div className='flex-grow flex flex-col items-center justify-center'>
+                <div id='visualizerBox'>
+
+                </div>
+            </div>
+        </div>
+        <div className='border flex-[3] rounded-lg border-white'>
+
+        </div>
     </div>
   )
 }

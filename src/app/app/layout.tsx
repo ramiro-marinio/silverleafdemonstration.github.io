@@ -10,9 +10,11 @@ export default function SignUpLayout({
 }>) {
   return (
    <FirebaseWrapper>
-    <div className="w-[100vw] h-[100vh] relative">
+    <div className="w-[100vw] h-[100vh] flex flex-col">
       <AppNavBar/>
-      {children}
+      <div className="flex-grow">
+        {children}
+      </div>
     </div>
    </FirebaseWrapper>
   );

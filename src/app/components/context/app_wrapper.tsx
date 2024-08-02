@@ -12,20 +12,9 @@ type Context = {
 const defaultValue:Context = {
     user: undefined,
 };
-const firebaseConfig = {
-    apiKey: "AIzaSyClrHhsSoFNMgPD4GnnyxPjnQE8p1cRw1Q",
-    authDomain: "yoursilverleaf.firebaseapp.com",
-    projectId: "yoursilverleaf",
-    storageBucket: "yoursilverleaf.appspot.com",
-    messagingSenderId: "979063356755",
-    appId: "1:979063356755:web:ca64baf026f2ca6481f5a6",
-    measurementId: "G-2SMRNMGFF3",
-};
-
 export const FirebaseContext = createContext<Context>(defaultValue);
 export default function FirebaseWrapper({children}:{children:React.ReactNode}) {
   let[user,setUser] = useState<User|undefined|null>(null);
-  console.log('heyy')
   const init = async()=>{
    
     onAuthStateChanged(auth,(newUser)=>{
