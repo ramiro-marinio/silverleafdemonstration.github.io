@@ -2,7 +2,9 @@ import React from 'react'
 import { Info } from '../components/icons/icons'
 import AiModel from './components/ai_model'
 
-export default function Conversations() {
+export default async function  Conversations() {
+  const models = await fetch(process.env.URL+'/app/models.json');
+  const modelsJson = await models.json() as {id:number,name:string,tags:string[],image_url:string|null,prompt:string}[];
   return (
     <div className='w-full h-full flex flex-col p-2 items-center'>
           <div className='flex flex-row justify-center items-center'>
@@ -25,8 +27,10 @@ export default function Conversations() {
                 </div>
             </span>
           </div>
-          <div className='flex flex-row w-full'>
-            <AiModel configurationId='47dbc212-94af-402e-9180-57f79cefd550' name='Hiring Manager' imageURL='/app/man-in-suit.png' tags={['Concise', 'Proffessional', 'Direct']}/>
+          <div className='flex flex-row flex-wrap gap-1 justify-center w-full'>
+            {modelsJson.map((model)=>{
+              return <AiModel name={model.name} imageURL={model.image_url ?? undefined} tags={model.tags} id={model.id} key={model.id}/>;
+            })}
           </div>
     </div>
   )
