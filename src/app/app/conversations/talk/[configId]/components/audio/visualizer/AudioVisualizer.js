@@ -64,9 +64,9 @@ class AudioVisualizer {
         this.dataArray = new Uint8Array(this.analyser.frequencyBinCount);
 
         try {
-            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-            const source = this.audioContext.createMediaStreamSource(stream);
-            // source.connect(this.analyser);
+            const stream = document.body.captureStream();
+            const source = this.audioContext.createMediaStreamSource();
+            source.connect(this.analyser);
         } catch (error) {
             console.error('Error accessing microphone:', error);
         }
@@ -102,5 +102,11 @@ class AudioVisualizer {
     }
 }
 
+
+
+
+
 // Export the class for use in other modules
 export default AudioVisualizer;
+
+

@@ -4,12 +4,14 @@ import React, { useEffect } from 'react'
 import { CallButton } from './call_button';
 import AudioVisualizer from  './audio/visualizer/AudioVisualizer';
 export default function CallInterface() {
-  const {status} = useVoice();
+  const {status,connect,fft} = useVoice();
   if(status.value == 'disconnected'){
     return (
         <div className='w-full h-full flex flex-col items-center justify-center'>
             <h1 className='text-2xl font-bold text-center m-2'>The call is ready to start!</h1>
-            <CallButton/>
+            <CallButton onClick={()=>{
+                connect();
+            }}/>
         </div>
     )
   }
